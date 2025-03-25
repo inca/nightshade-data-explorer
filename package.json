@@ -1,0 +1,42 @@
+{
+    "name": "nightshade-data-explorer",
+    "version": "1.0.0",
+    "description": "Data explorer Nightshade component",
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./dist/lib/index.d.ts",
+            "import": "./dist/bundle.js"
+        },
+        "./components.css": "./dist/components.css"
+    },
+    "files": [
+        "dist"
+    ],
+    "types": "./dist/types/index.d.ts",
+    "scripts": {
+        "dev": "vite --host",
+        "build": "NODE_ENV=production vite build",
+        "version": "npm run build",
+        "postversion": "npm publish --access=public && git push --tags origin main"
+    },
+    "author": "Boris Okunskiy",
+    "license": "ISC",
+    "peerDependencies": {
+        "nightshade": "^1.2.5",
+        "vue": "^3.5.13"
+    },
+    "devDependencies": {
+        "@nodescript/eslint-config": "^2.0.3",
+        "@types/node": "^22.10.5",
+        "@vitejs/plugin-vue": "^5.2.1",
+        "eslint": "^9.17.0",
+        "typescript": "^5.7.2",
+        "vite": "^6.0.7",
+        "vite-plugin-dts": "^4.5.3"
+    },
+    "dependencies": {
+        "@types/escape-html": "^1.0.4",
+        "escape-html": "^1.0.3"
+    }
+}
